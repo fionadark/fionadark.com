@@ -1,5 +1,5 @@
 body {
-    background-color: darkslategray;
+    background-color: midnightblue;
     width: 60%;
     margin: auto;
     border-spacing: 25px;
@@ -21,7 +21,7 @@ p {
 div {
     background-color: white;
     width: 90%;
-    border: 15px solid pink;
+    border: 15px solid mediumslateblue;
     padding: 45px;
     margin: 0 auto;
 }
