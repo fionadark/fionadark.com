@@ -14,6 +14,16 @@ h1 {
     padding-bottom: 25px;
 }
 
+h2 {
+    font-size: 32px;
+    font-family: 'Courier New', monospace;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+
 p {
     color: black;
 }
@@ -24,4 +34,80 @@ div {
     border: 15px solid mediumslateblue;
     padding: 45px;
     margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.projects-section {
+    padding: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #f8f9fa;
+    border: 3px solid mediumslateblue;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0;
+    width: auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(72, 61, 139, 0.3);
+}
+
+.project-card h3 {
+    font-family: 'Courier New', monospace;
+    color: mediumslateblue;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.project-description {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tech-stack {
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: mediumslateblue;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: midnightblue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.project-link:hover {
+    background-color: mediumslateblue;
 }
