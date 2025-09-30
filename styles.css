@@ -57,6 +57,10 @@ div {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     margin-top: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
 }
 
 .project-card {
