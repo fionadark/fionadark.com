@@ -111,3 +111,22 @@ div {
 .project-link:hover {
     background-color: mediumslateblue;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        width: 90%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
