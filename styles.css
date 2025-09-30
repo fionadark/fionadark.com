@@ -66,8 +66,10 @@ div {
     padding: 25px;
     margin: 0;
     width: auto;
+    max-width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    word-wrap: break-word;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -95,6 +97,9 @@ div {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .tech-tag {
@@ -106,7 +111,11 @@ div {
     font-size: 12px;
     font-family: 'Courier New', monospace;
     white-space: nowrap;
-    flex-shrink: 0;
+    flex-shrink: 1;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .project-link {
