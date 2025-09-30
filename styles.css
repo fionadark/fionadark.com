@@ -66,6 +66,8 @@ div {
     padding: 25px;
     margin: 0;
     width: auto;
+    box-sizing: border-box;
+    overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -90,6 +92,9 @@ div {
 
 .tech-stack {
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .tech-tag {
@@ -100,8 +105,8 @@ div {
     border-radius: 15px;
     font-size: 12px;
     font-family: 'Courier New', monospace;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .project-link {
