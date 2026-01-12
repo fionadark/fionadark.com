@@ -206,7 +206,7 @@ body {
 .social-btn {
     display: inline-block;
     background-color: var(--primary-purple);
-    color: var(--text-light);
+    color: #FFFFFF;
     padding: 0.8rem 2rem;
     text-decoration: none;
     border-radius: 8px;
@@ -218,6 +218,7 @@ body {
 
 .social-btn:hover {
     background-color: var(--dark-purple);
+    color: #FFFFFF;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(139, 123, 184, 0.5);
 }
@@ -282,21 +283,23 @@ body {
 .project-link,
 .btn-secondary {
     display: inline-block;
-    background-color: var(--dark-grey);
-    color: var(--text-light);
+    background-color: var(--primary-purple);
+    color: #FFFFFF;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(139, 123, 184, 0.3);
 }
 
 .project-link:hover,
 .btn-secondary:hover {
-    background-color: var(--primary-purple);
+    background-color: var(--dark-purple);
+    color: #FFFFFF;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(139, 123, 184, 0.4);
+    box-shadow: 0 4px 12px rgba(139, 123, 184, 0.5);
 }
 
 .view-more {
