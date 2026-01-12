@@ -128,6 +128,16 @@ body {
     padding: 3rem 0 2rem;
 }
 
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-purple);
+    box-shadow: 0 4px 15px rgba(139, 123, 184, 0.4);
+    margin-bottom: 1.5rem;
+}
+
 .hero h1 {
     font-size: 3.5rem;
     font-family: 'Courier New', monospace;
