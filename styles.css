@@ -34,11 +34,13 @@ body {
 
 /* ==================== Navigation Bar ==================== */
 .navbar {
-    background-color: var(--medium-grey);
+    background: rgba(30, 30, 36, 0.85);
+    backdrop-filter: blur(12px);
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid rgba(139, 123, 184, 0.2);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -56,12 +58,24 @@ body {
     font-weight: 700;
     color: var(--text-light);
     font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-brand::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--primary-purple);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary-purple);
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .nav-link {
@@ -69,19 +83,36 @@ body {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-purple);
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-    background-color: var(--dark-purple);
     color: var(--text-light);
 }
 
+.nav-link:hover::after {
+    width: 100%;
+}
+
 .nav-link.active {
-    background-color: var(--primary-purple);
     color: var(--text-light);
+}
+
+.nav-link.active::after {
+    width: 100%;
 }
 
 /* ==================== Container & Layout ==================== */
