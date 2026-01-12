@@ -1,162 +1,502 @@
+/* ==================== Color Scheme ==================== */
+:root {
+    --primary-purple: #8B7BB8;
+    --dark-purple: #6B5B95;
+    --light-purple: #A594C8;
+    --accent-purple: #9B88C4;
+    
+    --dark-grey: #2C2C34;
+    --medium-grey: #3E3E48;
+    --light-grey: #5A5A66;
+    --very-light-grey: #E8E8F0;
+    
+    --background-dark: #1E1E24;
+    --background-card: #FFFFFF;
+    --text-dark: #2C2C34;
+    --text-light: #FFFFFF;
+    --border-color: #D4D4E2;
+}
+
+/* ==================== Global Styles ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: midnightblue;
-    width: 60%;
-    margin: auto;
-    border-spacing: 25px;
-    padding-bottom: 50px;
-}
-
-h1 {
-    font-size: 40px;
-    font-family: 'Courier New', monospace;
-    color: white;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-h2 {
-    font-size: 32px;
-    font-family: 'Courier New', monospace;
-    color: white;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 25px;
-    margin-bottom: 0;
-}
-
-p {
-    color: black;
-    font-size: 18px;
+    background: linear-gradient(135deg, var(--background-dark) 0%, var(--dark-grey) 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    min-height: 100vh;
     line-height: 1.6;
 }
 
-.tagline {
-    font-family: 'Courier New', monospace;
-    color: mediumslateblue;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 25px;
+/* ==================== Navigation Bar ==================== */
+.navbar {
+    background-color: var(--medium-grey);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-div {
-    background-color: white;
-    width: 90%;
-    border: 15px solid mediumslateblue;
-    padding: 45px;
+.nav-container {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+    font-family: 'Courier New', monospace;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--very-light-grey);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--dark-purple);
+    color: var(--text-light);
+}
+
+.nav-link.active {
+    background-color: var(--primary-purple);
+    color: var(--text-light);
+}
+
+/* ==================== Container & Layout ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ==================== Hero Section ==================== */
+.hero {
+    text-align: center;
+    padding: 3rem 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Courier New', monospace;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--light-purple);
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--very-light-grey);
+    margin-top: 0.5rem;
+}
+
+/* ==================== Section Styles ==================== */
 .section {
-    margin-bottom: 40px;
+    margin: 3rem 0;
 }
 
-.projects-section {
-    padding: 30px;
+.section h2 {
+    font-size: 2.5rem;
+    font-family: 'Courier New', monospace;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
+.content-box {
+    background-color: var(--background-card);
+    border: 3px solid var(--primary-purple);
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-box p {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.content-box p:last-child {
+    margin-bottom: 0;
+}
+
+.content-box a {
+    color: var(--dark-purple);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.content-box a:hover {
+    color: var(--primary-purple);
+    text-decoration: underline;
+}
+
+/* ==================== Social Links ==================== */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.social-btn {
+    display: inline-block;
+    background-color: var(--primary-purple);
+    color: var(--text-light);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(139, 123, 184, 0.3);
+}
+
+.social-btn:hover {
+    background-color: var(--dark-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 123, 184, 0.5);
+}
+
+/* ==================== Project Grid ==================== */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-    margin-bottom: 60px;
-    background: none;
-    border: none;
-    padding: 0 0 50px 0;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .project-card {
-    background-color: #f8f9fa;
-    border: 3px solid mediumslateblue;
-    border-radius: 10px;
-    padding: 25px;
-    margin: 0;
-    width: auto;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    word-wrap: break-word;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--background-card);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(72, 61, 139, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(139, 123, 184, 0.3);
+    border-color: var(--primary-purple);
 }
 
 .project-card h3 {
     font-family: 'Courier New', monospace;
-    color: mediumslateblue;
-    font-size: 20px;
-    margin-bottom: 15px;
-    margin-top: 0;
+    color: var(--dark-purple);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .project-description {
-    color: #333;
+    color: var(--text-dark);
+    font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
+/* ==================== Tech Stack Tags ==================== */
 .tech-stack {
-    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .tech-tag {
     display: inline-block;
-    background-color: mediumslateblue;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 12px;
-    font-family: 'Courier New', monospace;
+    background-color: var(--light-purple);
+    color: var(--text-light);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
     white-space: nowrap;
-    flex-shrink: 1;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
-.project-link {
+/* ==================== Buttons ==================== */
+.project-link,
+.btn-secondary {
     display: inline-block;
-    background-color: midnightblue;
-    color: white;
-    padding: 10px 20px;
+    background-color: var(--dark-grey);
+    color: var(--text-light);
+    padding: 0.8rem 1.5rem;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover,
+.btn-secondary:hover {
+    background-color: var(--primary-purple);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 123, 184, 0.4);
+}
+
+.view-more {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* ==================== Resume Page Styles ==================== */
+.resume-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.resume-header h2 {
+    color: var(--dark-purple);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.contact-info p {
+    margin: 0.3rem 0;
+}
+
+.resume-section-block {
+    margin: 2.5rem 0;
+}
+
+.resume-section-block h3 {
+    color: var(--dark-purple);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-purple);
+}
+
+.resume-section-block h4 {
+    color: var(--dark-purple);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item {
+    margin-bottom: 2rem;
+}
+
+.resume-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.resume-item-header strong {
+    color: var(--dark-purple);
+    font-size: 1.2rem;
+}
+
+.resume-date {
+    color: var(--light-grey);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.company {
+    color: var(--light-grey);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.resume-item li {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    padding: 1rem;
+    background-color: var(--very-light-grey);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-purple);
+}
+
+.skill-category h4 {
+    margin-bottom: 0.5rem;
+}
+
+.skill-category p {
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ==================== Projects Detail Page ==================== */
+.project-detail-card {
+    margin-bottom: 3rem;
+}
+
+.project-detail-card h2 {
+    color: var(--text-light);
+    font-size: 2.5rem;
     font-family: 'Courier New', monospace;
-    font-size: 14px;
-    transition: background-color 0.2s ease;
+    margin-bottom: 1rem;
 }
 
-.project-link:hover {
-    background-color: mediumslateblue;
+.project-detail-card h3 {
+    color: var(--dark-purple);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
-/* Responsive design */
+.project-meta {
+    margin-bottom: 1.5rem;
+}
+
+.status-badge {
+    display: inline-block;
+    background-color: var(--primary-purple);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.project-detail-card ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-detail-card li {
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+}
+
+/* ==================== Footer ==================== */
+.footer {
+    background-color: var(--medium-grey);
+    color: var(--very-light-grey);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ==================== Responsive Design ==================== */
 @media (max-width: 768px) {
-    body {
-        width: 90%;
+    .container {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .content-box {
+        padding: 1.5rem;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
     }
 
-    h1 {
-        font-size: 32px;
+    .social-links {
+        flex-direction: column;
     }
 
-    h2 {
-        font-size: 26px;
+    .resume-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
