@@ -220,7 +220,7 @@ body {
 .social-btn {
     display: inline-block;
     background-color: var(--primary-purple);
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     padding: 0.8rem 2rem;
     text-decoration: none;
     border-radius: 8px;
@@ -232,9 +232,13 @@ body {
 
 .social-btn:hover {
     background-color: var(--dark-purple);
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(139, 123, 184, 0.5);
+}
+
+.social-btn span {
+    color: #FFFFFF;
 }
 
 /* ==================== Project Grid ==================== */
@@ -479,6 +483,7 @@ body {
 
 .project-meta {
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .status-badge {
