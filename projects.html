@@ -79,6 +79,87 @@
             </div>
 
             <div class="project-detail-card">
+                <h2>The Home Archive - A Personal Library Application</h2>
+                <div class="project-meta">
+                    <a href="https://github.com/fionadark/the-home-archive" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="content-box">
+                    <h3>Overview</h3>
+                    <p>
+                        The Home Archive is a home library management application built as an experiment in AI-driven software 
+                        development using GitHub Spec Kit and Claude Sonnet 4. This application demonstrates the power of 
+                        AI-assisted development by creating a complete book search and management system entirely through 
+                        collaborative development between a human developer and AI implementation.
+                    </p>
+
+                    <h3>Development Approach</h3>
+                    <ul>
+                        <li><strong>AI-Driven Development:</strong> Built collaboratively with Claude Sonnet 4</li>
+                        <li><strong>Specification-First:</strong> Designed using GitHub Spec Kit methodology</li>
+                        <li><strong>Iterative Refinement:</strong> Features evolved through natural language conversations</li>
+                        <li><strong>Quality-Focused:</strong> Comprehensive testing and code optimization throughout</li>
+                    </ul>
+
+                    <h3>Key Features</h3>
+                    <p><strong>🔍 Intelligent Book Search</strong></p>
+                    <ul>
+                        <li>Multi-source search across local database and external APIs (OpenLibrary, Google Books)</li>
+                        <li>Enhanced search with automatic external API fallback when local results are insufficient</li>
+                        <li>Smart suggestions with real-time search recommendations</li>
+                        <li>Fuzzy matching and partial word support (e.g., "harr" finds "Harry Potter")</li>
+                        <li>Advanced filtering by category, publication year, rating, and metadata</li>
+                        <li>Circuit breaker patterns for reliable external API integration</li>
+                    </ul>
+
+                    <p><strong>📚 Library Management</strong></p>
+                    <ul>
+                        <li>Personal library with secure user authentication and JWT tokens</li>
+                        <li>Complete book metadata tracking (title, author, genre, ISBN, publication year, etc.)</li>
+                        <li>Reading lists and favorite books organization</li>
+                        <li>Book ratings and reviews with personal and community ratings</li>
+                        <li>Physical location tracking with room and shelf management</li>
+                    </ul>
+
+                    <p><strong>🔗 External API Integration</strong></p>
+                    <ul>
+                        <li>OpenLibrary integration as primary external book source (no API key required)</li>
+                        <li>Google Books API support (optional enhancement, requires API key)</li>
+                        <li>Intelligent fallback between local database and external sources</li>
+                        <li>Real-time health monitoring of external APIs</li>
+                        <li>Rate limiting and timeout protection for reliable service</li>
+                    </ul>
+
+                    <h3>Tech Stack</h3>
+                    <p>
+                        The technology stack was selected through AI analysis of requirements, considering factors like 
+                        long-term support, mature ecosystem, and production scalability:
+                    </p>
+                    <ul>
+                        <li>Java 21 LTS with modern language features</li>
+                        <li>Spring Boot 3.x ecosystem (Spring Data JPA, Spring Web, Spring Security)</li>
+                        <li>Resilience4j for circuit breakers and fault-tolerant external API calls</li>
+                        <li>Gradle for flexible build system and dependency management</li>
+                        <li>H2/PostgreSQL for development flexibility with production scalability</li>
+                        <li>OpenAPI for self-documenting API with interactive exploration</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java 21</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Spring Security</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Gradle</span>
+                        <span class="tech-tag">OpenAPI</span>
+                        <span class="tech-tag">Resilience4j</span>
+                        <span class="tech-tag">AI-Driven Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-detail-card">
                 <h2>Nytelife - An NYC Nightclub App</h2>
                 <div class="project-meta">
                     <span class="status-badge">iOS Application</span>
