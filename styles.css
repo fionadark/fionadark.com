@@ -477,9 +477,11 @@ body {
 .project-subtitle {
     color: var(--light-purple);
     font-size: 1.3rem;
+    font-family: 'Courier New', monospace;
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .project-detail-card h3 {
