@@ -6,6 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Projects - Fiona Dark</title>
+    <style>
+        .project-detail-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--background-card);
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .project-detail-card:hover .project-header {
+            border-color: var(--primary-purple);
+            box-shadow: 0 4px 20px rgba(139, 123, 184, 0.3);
+        }
+        
+        .project-title-section {
+            flex: 1;
+        }
+        
+        .project-title-section h2 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .expand-icon {
+            font-size: 1.5rem;
+            color: var(--primary-purple);
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+        
+        .project-detail-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+        
+        .project-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .project-detail-card.expanded .project-content {
+            max-height: 5000px;
+        }
+        
+        .project-meta {
+            padding: 1rem 1.5rem 0;
+        }
+        
+        .content-box {
+            margin: 0;
+            padding: 1.5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,14 +88,21 @@
         </header>
 
         <section class="section">
-            <div class="project-detail-card">
-                <h2>Augur</h2>
-                <p class="project-subtitle">A Tarot Card Reading Application</p>
-                <div class="project-meta">
-                    <a href="https://github.com/fionadark/augur" class="project-link" target="_blank">View on GitHub</a>
+            <div class="project-detail-card" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-title-section">
+                        <h2>Augur</h2>
+                        <p class="project-subtitle">A Tarot Card Reading Application</p>
+                    </div>
+                    <span class="expand-icon">▼</span>
                 </div>
                 
-                <div class="content-box">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <a href="https://github.com/fionadark/augur" class="project-link" target="_blank" onclick="event.stopPropagation()">View on GitHub</a>
+                    </div>
+                    
+                    <div class="content-box">
                     <h3>Overview</h3>
                     <p>
                         Augur is a comprehensive Java-based Tarot card reading application that brings the mystical art of 
@@ -76,18 +144,26 @@
                         <span class="tech-tag">Picocli</span>
                         <span class="tech-tag">OOP</span>
                     </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-detail-card">
-                <h2>The Little Library</h2>
-                <p class="project-subtitle">A Personal Library Application</p>
-                <div class="project-meta">
-                    <a href="https://github.com/fionadark/the-little-library" class="project-link" target="_blank">View on GitHub</a>
-                    <a href="https://fionadark.com/littlelibrary/" class="project-link" target="_blank">Visit the Little Library</a>
+            <div class="project-detail-card" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-title-section">
+                        <h2>The Little Library</h2>
+                        <p class="project-subtitle">A Personal Library Application</p>
+                    </div>
+                    <span class="expand-icon">▼</span>
                 </div>
                 
-                <div class="content-box">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <a href="https://github.com/fionadark/the-little-library" class="project-link" target="_blank" onclick="event.stopPropagation()">View on GitHub</a>
+                        <a href="https://fionadark.com/littlelibrary/" class="project-link" target="_blank" onclick="event.stopPropagation()">Visit the Little Library</a>
+                    </div>
+                    
+                    <div class="content-box">
                     <h3>Overview</h3>
                     <p>
                         The Little Library is a personal library management web application for tracking and organizing your 
@@ -137,17 +213,25 @@
                         <span class="tech-tag">Railway</span>
                         <span class="tech-tag">GitHub Pages</span>
                     </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-detail-card">
-                <h2>The Home Archive</h2>
-                <p class="project-subtitle">A Personal Library Application</p>
-                <div class="project-meta">
-                    <a href="https://github.com/fionadark/the-home-archive" class="project-link" target="_blank">View on GitHub</a>
+            <div class="project-detail-card" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-title-section">
+                        <h2>The Home Archive</h2>
+                        <p class="project-subtitle">A Personal Library Application</p>
+                    </div>
+                    <span class="expand-icon">▼</span>
                 </div>
                 
-                <div class="content-box">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <a href="https://github.com/fionadark/the-home-archive" class="project-link" target="_blank" onclick="event.stopPropagation()">View on GitHub</a>
+                    </div>
+                    
+                    <div class="content-box">
                     <h3>Overview</h3>
                     <p>
                         The Home Archive is a home library management application built as an experiment in AI-driven software 
@@ -219,17 +303,25 @@
                         <span class="tech-tag">Resilience4j</span>
                         <span class="tech-tag">AI-Driven Development</span>
                     </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-detail-card">
-                <h2>Nytelife</h2>
-                <p class="project-subtitle">An NYC Nightclub Application</p>
-                <div class="project-meta">
-                    <span class="status-badge">iOS Application</span>
+            <div class="project-detail-card" onclick="toggleProject(this)">
+                <div class="project-header">
+                    <div class="project-title-section">
+                        <h2>Nytelife</h2>
+                        <p class="project-subtitle">An NYC Nightclub Application</p>
+                    </div>
+                    <span class="expand-icon">▼</span>
                 </div>
                 
-                <div class="content-box">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="status-badge">iOS Application</span>
+                    </div>
+                    
+                    <div class="content-box">
                     <h3>Overview</h3>
                     <p>
                         Nytelife is a sophisticated iOS application designed to help users discover and explore New York City's 
@@ -276,6 +368,7 @@
                         <span class="tech-tag">UI Design</span>
                         <span class="tech-tag">OOP</span>
                     </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -284,6 +377,12 @@
     <footer class="footer">
         <p>&copy; 2026 Fiona Dark. All rights reserved.</p>
     </footer>
+    
+    <script>
+        function toggleProject(element) {
+            element.classList.toggle('expanded');
+        }
+    </script>
 </body>
 
 </html>
