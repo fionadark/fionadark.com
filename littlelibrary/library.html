@@ -511,7 +511,7 @@
                     }
                 }, 50);
             } else {
-                window.location.href = '/';
+                window.location.href = 'index.html';
             }
         });
     </script>
@@ -530,7 +530,7 @@
         async function logout() {
             try {
                 await window.signOutFirebase(window.auth);
-                window.location.href = '/';
+                window.location.href = 'index.html';
             } catch (error) {
                 showMessage('Sign out failed: ' + error.message);
             }
