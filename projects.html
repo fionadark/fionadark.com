@@ -8,8 +8,17 @@
     <title>Projects - Fiona Dark</title>
     <style>
         .project-detail-card {
-            cursor: pointer;
+            background: var(--background-card);
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
             transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        
+        .project-detail-card:hover {
+            border-color: var(--primary-purple);
+            box-shadow: 0 4px 20px rgba(139, 123, 184, 0.3);
         }
         
         .project-header {
@@ -17,15 +26,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem;
-            background: var(--background-card);
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
+            cursor: pointer;
             transition: all 0.3s ease;
-        }
-        
-        .project-detail-card:hover .project-header {
-            border-color: var(--primary-purple);
-            box-shadow: 0 4px 20px rgba(139, 123, 184, 0.3);
         }
         
         .project-title-section {
@@ -59,12 +61,14 @@
         }
         
         .project-meta {
-            padding: 1rem 1.5rem 0;
+            padding: 0 1.5rem 1rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
         }
         
         .content-box {
             margin: 0;
-            padding: 1.5rem;
+            padding: 0 1.5rem 1.5rem;
         }
     </style>
 </head>
