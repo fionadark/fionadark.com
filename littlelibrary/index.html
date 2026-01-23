@@ -240,6 +240,7 @@
     <!-- Firebase SDK -->
     <script type="module">
         import { auth, googleProvider, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, signOut, onAuthStateChanged } from './firebase-config.js';
+        import { showMessage } from './ui-utils.js';
 
         // Make auth available globally
         window.auth = auth;
@@ -276,17 +277,13 @@
         window.signOut = signOut;
     </script>
 
-    <script>
-        function showMessage(message, type = 'error') {
-            const messageDiv = document.getElementById('message');
-            messageDiv.className = type;
-            messageDiv.textContent = message;
-            setTimeout(() => {
-                messageDiv.textContent = '';
-                messageDiv.className = '';
-            }, 5000);
-        }
+    <script type="module">
+        import { showMessage } from './ui-utils.js';
+        // Make showMessage available globally
+        window.showMessage = showMessage;
+    </script>
 
+    <script>
         function showLogin() {
             document.getElementById('signup-section').classList.remove('active');
             document.getElementById('login-section').classList.add('active');
